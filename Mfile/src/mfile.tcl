@@ -487,17 +487,17 @@ proc makemfilemenu {} {
 			      setdeftarget; setdformat }
 	    .f1.f1.mb2.m1.c30 add radiobutton \
 		-variable debugidx -value 1 \
-		-label "AVR-COFF (AVR Studio 3.x, VMLAB < 3.10)" \
+		-label "AVR-COFF (AVR Studio 3.x, VMLAB < 3.10 [obsolete])" \
 		-command {set dformat "stabs"; set deftarget "coff"; \
 			      setdformat; setdeftarget }
 	    .f1.f1.mb2.m1.c30 add radiobutton \
 		-variable debugidx -value 2 \
-		-label "AVR-ext-COFF (AVR Studio 4.07+, VMLAB 3.10+)" \
+		-label "AVR-ext-COFF (AVR Studio 4.07+, VMLAB 3.10+ [obsolete])" \
 		-command {set dformat "stabs"; set deftarget "extcoff"; \
 			      setdformat; setdeftarget }
 	    .f1.f1.mb2.m1.c30 add radiobutton \
 		-variable debugidx -value 3 \
-		-label {ELF/DWARF-2 (AVR Studio ELF, GDB [experimental])} \
+		-label {ELF/DWARF-2 (AVR Studio 4.11+)} \
 		-command {set dformat "dwarf-2"; set deftarget "none"; \
 			      setdeftarget; setdformat }
 	} else {
