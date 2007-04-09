@@ -43,6 +43,9 @@ set devicelist \
     { {at90can32 0x800900}\
 	 {at90can64 0x801100} \
 	 {at90can128 0x801100} \
+	 at90pwm1 \
+	 at90pwm2 \
+	 at90pwm3 \
 	 at90s1200 \
 	 at90s2313 \
 	 at90s2323 \
@@ -53,6 +56,12 @@ set devicelist \
 	 at90s4434 \
 	 {at90s8515 0x800260} \
 	 at90s8535 \
+	 at90usb1286 \
+	 at90usb1287 \
+	 at90usb162 \
+	 at90usb646 \
+	 at90usb647 \
+	 at90usb82 \
 	 {atmega103 0x801000} \
 	 {atmega128 0x801100} \
 	 {atmega1280 0x802200} \
@@ -61,26 +70,38 @@ set devicelist \
 	 {atmega161 0x800460} \
 	 {atmega162 0x800500} \
 	 atmega163 \
-	 atmega164 \
+	 atmega164p \
 	 atmega165 \
+	 atmega165p \
 	 atmega168 \
 	 atmega169 \
+	 atmega169p \
+	 atmega2560 \
+	 atmega2561 \
 	 atmega32 \
 	 atmega323 \
-	 atmega324 \
+	 atmega324p \
 	 atmega325 \
+	 atmega325p \
 	 atmega3250 \
 	 atmega329 \
+	 atmega329p \
 	 atmega3290 \
+	 atmega3290p \
+	 atmega406 \
 	 atmega48 \
+	 atmega603 \
 	 {atmega64 0x801100} \
 	 {atmega640 0x802200} \
 	 atmega644 \
+	 atmega644p \
 	 atmega645 \
 	 atmega6450 \
 	 atmega649 \
 	 atmega6490 \
 	 atmega8 \
+	 atmega83 \
+	 atmega85 \
 	 {atmega8515 0x800260} \
 	 atmega8535 \
 	 atmega88
