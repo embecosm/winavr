@@ -67,69 +67,13 @@ Prerequisites
 -------------
 
 Requires the Tcl and Tk toolkits in recent versions (no exact version
-known, probably any 8.x version is OK).  Current WinAVR (20030913)
-contains these tools.
+known, probably any 8.x version is OK).
 
 As an alternative to the standard Tk wish interpreter, the tix
 toolkit's tixwish interpreter can be used.  Under Unix systems, the
 look & feel is then closer to what Tk wish looks like under Windows.
 
 
-Installation on Windows
------------------------
-
-[Users of WinAVR 20040404 and beyond do get Mfile pre-installed.  See
-below for upgrade instructions.]
-
-Extract the archive into a subdirectory of its own, e. g.
-
-c:\WinAVR\mfile
-
-Double-click on the icon for »mfile.tcl« in your file browser
-(explorer), and tell it to use c:\WinAVR\bin\wish84.exe to run this
-file.  (Adjust appropriately if you installed WinAVR in another
-directory.)
-
-Since Windows always changes to the directory of the application
-before starting it, all template and auxiliary files should be found
-easily there without editing mfile.tcl.  Note however that this
-directory will also become the default directory where »Makefile« will
-be stored, unless you change a different location with »Save As...«
-
-As another option, the following has been contributed by Eric Weddington
-on how to properly create a shortcut on the desktop:
-
-1. Extract the mfile.zip archive into your WinAVR
-installation directory. This will automatically create a
-subdirectory \mfile with all the needed files in this
-subdirectory.
-
-2. Create a Shortcut on your Desktop.
-
-3. For the location of the item, select the program
-wish84.exe which is located in \bin subdirectory of your
-WinAVR installation directory. Add a space and then type
-the absolute pathname of the program, mfile.tcl, which is
-located in the mfile subdirectory of your WinAVR
-installation directory.
-
-For example, if your WinAVR installation directory is at
-C:\WinAVR, then the item will look like:
-C:\WinAVR\bin\wish84.exe C:\WinAVR\mfile\mfile.tcl
-
-4. The name of the Shortcut should be: MFile
-
-5. When finished, you will have to go back and properly
-select the Start Directory. Right-click the shortcut icon
-on your Deskopt and select Properties. In the Start In edit
-box, put in the mfile subdirectory of your WinAVR
-installation directory. NOTE! This is essential if MFile is
-to execute correctly as there are additional files that it
-needs to find.
-
-For example, if your WinAVR installation directory is at
-C:\WinAVR, then the Start directory will be:
-C:\WinAVR\mfile
 
 Installation on Unix
 --------------------
@@ -142,11 +86,6 @@ If a different directory is chosen, edit the setting of »prefix« on
 top of mfile.tcl to match the installation directory, or alternatively
 use the environment variable MFILE_HOME to override the default
 setting.
-
-If you'd like to use a different interpreter than
-/usr/local/bin/tixwish, edit the #! setting in the first line.  The
-standard Tk wish interpreter is supported as well as the tix toolkit
-one.
 
 If you prefer, create a symbolic link for convenience (so the
 application can be found along your default $PATH setting), like

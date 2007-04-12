@@ -1,4 +1,4 @@
-#!/usr/local/bin/tixwish
+#!/usr/bin/wish
 # ----------------------------------------------------------------------------
 # "THE BEER-WARE LICENSE" (Revision 42) (by Poul-Henning Kamp):
 # Joerg Wunsch <j.gnu@uriah.heep.sax.de> wrote this file.  As long as you
