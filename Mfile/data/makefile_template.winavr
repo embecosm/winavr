@@ -191,14 +191,14 @@ CPPFLAGS += $(patsubst %,-I%,$(EXTRAINCDIRS))
 
 #---------------- Assembler Options ----------------
 #  -Wa,...:   tell GCC to pass this to the assembler.
-#  -ahlms:    create listing
+#  -adhlns:   create listing
 #  -gstabs:   have the assembler create line number information; note that
 #             for use in COFF files, additional information about filenames
 #             and function names needs to be present in the assembler source
 #             files -- see avr-libc docs [FIXME: not yet described there]
 #  -listing-cont-lines: Sets the maximum number of continuation lines of hex 
 #       dump that will be displayed for a given single line of source input.
-ASFLAGS = -Wa,-adhlns=$(<:.S=$(OBJDIR)/%.lst),-gstabs,--listing-cont-lines=100
+ASFLAGS = -Wa,-adhlns=$(<:%.S=$(OBJDIR)/%.lst),-gstabs,--listing-cont-lines=100
 
 
 #---------------- Library Options ----------------
@@ -424,7 +424,7 @@ end:
 
 # Display size of file.
 HEXSIZE = $(SIZE) --target=$(FORMAT) $(TARGET).hex
-ELFSIZE = $(SIZE) --format=avr $(TARGET).elf
+ELFSIZE = $(SIZE) --mcu=$(MCU) --format=avr $(TARGET).elf
 
 sizebefore:
 	@if test -f $(TARGET).elf; then echo; echo $(MSG_SIZE_BEFORE); $(ELFSIZE); \
