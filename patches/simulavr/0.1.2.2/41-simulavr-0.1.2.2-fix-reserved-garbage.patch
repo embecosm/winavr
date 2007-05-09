@@ -1,0 +1,18 @@
+--- src/avrcore.c.orig	2004-01-01 20:01:01.000000000 -0700
++++ src/avrcore.c	2004-04-08 17:07:54.158974400 -0600
+@@ -33,6 +33,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <signal.h>
+ 
+ #include "avrerror.h"
+@@ -626,6 +627,7 @@
+ 
+     for (i = IO_REG_ADDR_BEGIN; i < IO_REG_ADDR_END; i++)
+     {
++        memset((void *) name, 0, sizeof (name));
+         mem_io_fetch (core->mem, i, &val, name, sizeof (name) - 1);
+         display_io_reg_name (i - IO_REG_ADDR_BEGIN, name);
+     }

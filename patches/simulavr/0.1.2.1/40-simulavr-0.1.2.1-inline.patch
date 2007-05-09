@@ -1,0 +1,11 @@
+--- src/disp-vcd/vcd.h.old	2002-11-16 17:29:20.000000000 -0700
++++ src/disp-vcd/vcd.h	2006-01-18 15:08:09.468908600 -0700
+@@ -47,7 +47,7 @@ int vcd_trace_pc( void );
+ /* Interface for disp.c */
+ int vcd_write_header( void );
+ 
+-inline int vcd_set_clock( unsigned int c );
++int vcd_set_clock( unsigned int c );
+ int vcd_write_clock( void );
+ 
+ int vcd_bind_io_reg_shortcut( char *io_reg_name, int io_reg_addr );

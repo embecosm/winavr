@@ -1,0 +1,18 @@
+WinAVR Patches
+==============
+
+The patches are organized into subdirectories according to project and version
+number of that project.
+
+Each patch filename is prefixed with a two digit number. This number classifies
+the patch into the following areas:
+
+    0x = Distribution specific (distro names and versions)
+    1x = Host platform specific
+    2x = Build system specific
+    3x = New target features
+    4x = Patches to fix target bugs
+    5x = New devices
+    6x = Monolithic patches (that have not yet been decomposed into the above categories)
+
+This number also determines the order in which the patches are applied.
