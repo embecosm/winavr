@@ -45,7 +45,11 @@ set devicelist \
 	 {at90can128 0x801100} \
 	 at90pwm1 \
 	 at90pwm2 \
+	 at90pwm216 \
+	 at90pwm2b \
 	 at90pwm3 \
+	 at90pwm316 \
+	 at90pwm3b \
 	 at90s1200 \
 	 at90s2313 \
 	 at90s2323 \
@@ -74,6 +78,7 @@ set devicelist \
 	 atmega165 \
 	 atmega165p \
 	 atmega168 \
+	 atmega168p \
 	 atmega169 \
 	 atmega169p \
 	 atmega2560 \
@@ -84,13 +89,14 @@ set devicelist \
 	 atmega325 \
 	 atmega325p \
 	 atmega3250 \
+	 atmega328p \
 	 atmega329 \
 	 atmega329p \
 	 atmega3290 \
 	 atmega3290p \
 	 atmega406 \
 	 atmega48 \
-	 atmega603 \
+	 atmega48p \
 	 {atmega64 0x801100} \
 	 {atmega640 0x802200} \
 	 atmega644 \
@@ -100,11 +106,10 @@ set devicelist \
 	 atmega649 \
 	 atmega6490 \
 	 atmega8 \
-	 atmega83 \
-	 atmega85 \
 	 {atmega8515 0x800260} \
 	 atmega8535 \
 	 atmega88
+	 atmega88p
 	 attiny11 \
 	 attiny12 \
 	 attiny13 \
@@ -116,9 +121,11 @@ set devicelist \
 	 attiny26 \
 	 attiny261 \
 	 attiny28 \
+	 attiny43u \
 	 attiny44 \
 	 attiny45 \
 	 attiny461 \
+	 attiny48 \
 	 attiny84 \
 	 attiny85 \
 	 attiny861 \
