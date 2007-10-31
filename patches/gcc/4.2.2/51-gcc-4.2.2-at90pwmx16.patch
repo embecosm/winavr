@@ -1,0 +1,52 @@
+--- gcc/config/avr/avr.c.old	2007-09-13 09:19:52.750000000 -0600
++++ gcc/config/avr/avr.c	2007-09-13 09:20:55.625000000 -0600
+@@ -276,6 +276,8 @@ static const struct mcu_type_s avr_mcu_t
+   { "at90can32",    ARCH_AVR5, "__AVR_AT90CAN32__" },
+   { "at90can64",    ARCH_AVR5, "__AVR_AT90CAN64__" },
+   { "at90can128",   ARCH_AVR5, "__AVR_AT90CAN128__" },
++  { "at90pwm216",   ARCH_AVR5, "__AVR_AT90PWM216__" },
++  { "at90pwm316",   ARCH_AVR5, "__AVR_AT90PWM316__" },
+   { "at90usb82",    ARCH_AVR5, "__AVR_AT90USB82__" },
+   { "at90usb162",   ARCH_AVR5, "__AVR_AT90USB162__" },
+   { "at90usb646",   ARCH_AVR5, "__AVR_AT90USB646__" },
+--- gcc/config/avr/avr.h.old	2007-09-13 09:21:16.359375000 -0600
++++ gcc/config/avr/avr.h	2007-09-13 09:25:56.281250000 -0600
+@@ -773,13 +773,17 @@ mmcu=*:-mmcu=%*}"
+   mmcu=at76*:-m avr3}\
+ %{mmcu=atmega8*|\
+   mmcu=atmega48|\
+-  mmcu=at90pwm*:-m avr4}\
++  mmcu=at90pwm1|\
++  mmcu=at90pwm2|\
++  mmcu=at90pwm3:-m avr4}\
+ %{mmcu=atmega16*|\
+   mmcu=atmega32*|\
+   mmcu=atmega406|\
+   mmcu=atmega64*|\
+   mmcu=atmega128*|\
+   mmcu=at90can*|\
++  mmcu=at90pwm216|\
++  mmcu=at90pwm316|\
+   mmcu=at90usb*|\
+   mmcu=at94k:-m avr5}\
+ %{mmcu=atmega256*:-m avr6}\
+@@ -907,6 +911,8 @@ mmcu=*:-mmcu=%*}"
+ %{mmcu=at90can32:crtcan32.o%s} \
+ %{mmcu=at90can64:crtcan64.o%s} \
+ %{mmcu=at90can128:crtcan128.o%s} \
++%{mmcu=at90pwm216:crt90pwm216.o%s} \
++%{mmcu=at90pwm316:crt90pwm316.o%s} \
+ %{mmcu=at90usb82:crtusb82.o%s} \
+ %{mmcu=at90usb162:crtusb162.o%s} \
+ %{mmcu=at90usb646:crtusb646.o%s} \
+--- gcc/config/avr/t-avr.old	2007-09-13 09:26:33.578125000 -0600
++++ gcc/config/avr/t-avr	2007-09-13 09:27:22.187500000 -0600
+@@ -105,6 +105,8 @@ MULTILIB_MATCHES = \
+ 	mmcu?avr5=mmcu?at90can32 \
+ 	mmcu?avr5=mmcu?at90can64 \
+ 	mmcu?avr5=mmcu?at90can128 \
++    mmcu?avr5=mmcu?at90pwm216 \
++    mmcu?avr5=mmcu?at90pwm316 \
+ 	mmcu?avr5=mmcu?at90usb82 \
+ 	mmcu?avr5=mmcu?at90usb162 \
+ 	mmcu?avr5=mmcu?at90usb646 \

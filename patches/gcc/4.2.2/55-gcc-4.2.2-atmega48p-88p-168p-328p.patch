@@ -1,0 +1,127 @@
+Add support to GCC for ATmega48P, ATmega88P, ATmega168P, ATmega328P.
+
+Index: gcc/config/avr/avr.c
+===================================================================
+--- gcc/config/avr/avr.c	(revision 129414)
++++ gcc/config/avr/avr.c	(working copy)
+@@ -202,7 +202,9 @@
+   { "avr4",         ARCH_AVR4, NULL },
+   { "atmega8",      ARCH_AVR4, "__AVR_ATmega8__" },
+   { "atmega48",     ARCH_AVR4, "__AVR_ATmega48__" },
++  { "atmega48p",    ARCH_AVR4, "__AVR_ATmega48P__" },
+   { "atmega88",     ARCH_AVR4, "__AVR_ATmega88__" },
++  { "atmega88p",    ARCH_AVR4, "__AVR_ATmega88P__" },
+   { "atmega8515",   ARCH_AVR4, "__AVR_ATmega8515__" },
+   { "atmega8535",   ARCH_AVR4, "__AVR_ATmega8535__" },
+   { "atmega8hva",   ARCH_AVR4, "__AVR_ATmega8HVA__" },
+@@ -219,6 +221,7 @@
+   { "atmega165",    ARCH_AVR5, "__AVR_ATmega165__" },
+   { "atmega165p",   ARCH_AVR5, "__AVR_ATmega165P__" },
+   { "atmega168",    ARCH_AVR5, "__AVR_ATmega168__" },
++  { "atmega168p",   ARCH_AVR5, "__AVR_ATmega168P__" },
+   { "atmega169",    ARCH_AVR5, "__AVR_ATmega169__" },
+   { "atmega169p",   ARCH_AVR5, "__AVR_ATmega169P__" },
+   { "atmega32",     ARCH_AVR5, "__AVR_ATmega32__" },
+@@ -228,6 +231,7 @@
+   { "atmega325p",   ARCH_AVR5, "__AVR_ATmega325P__" },
+   { "atmega3250",   ARCH_AVR5, "__AVR_ATmega3250__" },
+   { "atmega3250p",  ARCH_AVR5, "__AVR_ATmega3250P__" },
++  { "atmega328p",   ARCH_AVR5, "__AVR_ATmega328P__" },
+   { "atmega329",    ARCH_AVR5, "__AVR_ATmega329__" },
+   { "atmega329p",   ARCH_AVR5, "__AVR_ATmega329P__" },
+   { "atmega3290",   ARCH_AVR5, "__AVR_ATmega3290__" },
+Index: gcc/config/avr/t-avr
+===================================================================
+--- gcc/config/avr/t-avr	(revision 129414)
++++ gcc/config/avr/t-avr	(working copy)
+@@ -62,10 +62,12 @@
+ 	mmcu?avr3=mmcu?at43usb355 \
+ 	mmcu?avr3=mmcu?at76c711 \
+ 	mmcu?avr4=mmcu?atmega48 \
++	mmcu?avr4=mmcu?atmega48p \
+ 	mmcu?avr4=mmcu?atmega8 \
+ 	mmcu?avr4=mmcu?atmega8515 \
+ 	mmcu?avr4=mmcu?atmega8535 \
+ 	mmcu?avr4=mmcu?atmega88 \
++	mmcu?avr4=mmcu?atmega88p \
+ 	mmcu?avr4=mmcu?atmega8hva \
+ 	mmcu?avr4=mmcu?at90pwm1 \
+ 	mmcu?avr4=mmcu?at90pwm2 \
+@@ -78,6 +80,7 @@
+ 	mmcu?avr5=mmcu?atmega165 \
+ 	mmcu?avr5=mmcu?atmega165p \
+ 	mmcu?avr5=mmcu?atmega168 \
++	mmcu?avr5=mmcu?atmega168p \
+ 	mmcu?avr5=mmcu?atmega169 \
+ 	mmcu?avr5=mmcu?atmega169p \
+ 	mmcu?avr5=mmcu?atmega32 \
+@@ -87,6 +90,7 @@
+ 	mmcu?avr5=mmcu?atmega325p \
+ 	mmcu?avr5=mmcu?atmega3250 \
+ 	mmcu?avr5=mmcu?atmega3250p \
++	mmcu?avr5=mmcu?atmega328p \
+ 	mmcu?avr5=mmcu?atmega329 \
+ 	mmcu?avr5=mmcu?atmega329p \
+ 	mmcu?avr5=mmcu?atmega3290 \
+Index: gcc/config/avr/avr.h
+===================================================================
+--- gcc/config/avr/avr.h	(revision 129414)
++++ gcc/config/avr/avr.h	(working copy)
+@@ -762,7 +762,7 @@
+   mmcu=at43*|\
+   mmcu=at76*:-m avr3}\
+ %{mmcu=atmega8*|\
+-  mmcu=atmega48|\
++  mmcu=atmega48*|\
+   mmcu=at90pwm1|\
+   mmcu=at90pwm2|\
+   mmcu=at90pwm3:-m avr4}\
+@@ -778,10 +778,11 @@
+   mmcu=at94k:-m avr5}\
+ %{mmcu=atmega324*|\
+   mmcu=atmega325*|\
++  mmcu=atmega328p|\
+   mmcu=atmega329*|\
+   mmcu=atmega406|\
+-  mmcu=atmega48|\
+-  mmcu=atmega88|\
++  mmcu=atmega48*|\
++  mmcu=atmega88*|\
+   mmcu=atmega64|\
+   mmcu=atmega644*|\
+   mmcu=atmega645*|\
+@@ -790,7 +791,7 @@
+   mmcu=atmega162|\
+   mmcu=atmega164*|\
+   mmcu=atmega165*|\
+-  mmcu=atmega168|\
++  mmcu=atmega168*|\
+   mmcu=atmega169*|\
+   mmcu=atmega8hva|\
+   mmcu=atmega16hva|\
+@@ -854,7 +855,9 @@
+ %{mmcu=at76c711:crt76711.o%s} \
+ %{mmcu=atmega8|mmcu=avr4:crtm8.o%s} \
+ %{mmcu=atmega48:crtm48.o%s} \
++%{mmcu=atmega48p:crtm48p.o%s} \
+ %{mmcu=atmega88:crtm88.o%s} \
++%{mmcu=atmega88p:crtm88p.o%s} \
+ %{mmcu=atmega8515:crtm8515.o%s} \
+ %{mmcu=atmega8535:crtm8535.o%s} \
+ %{mmcu=at90pwm1:crt90pwm1.o%s} \
+@@ -868,6 +871,7 @@
+ %{mmcu=atmega165:crtm165.o%s} \
+ %{mmcu=atmega165p:crtm165p.o%s} \
+ %{mmcu=atmega168:crtm168.o%s} \
++%{mmcu=atmega168p:crtm168p.o%s} \
+ %{mmcu=atmega169:crtm169.o%s} \
+ %{mmcu=atmega169p:crtm169p.o%s} \
+ %{mmcu=atmega32:crtm32.o%s} \
+@@ -877,6 +881,7 @@
+ %{mmcu=atmega325p:crtm325p.o%s} \
+ %{mmcu=atmega3250:crtm3250.o%s} \
+ %{mmcu=atmega3250p:crtm3250p.o%s} \
++%{mmcu=atmega328p:crtm328p.o%s} \
+ %{mmcu=atmega329:crtm329.o%s} \
+ %{mmcu=atmega329p:crtm329p.o%s} \
+ %{mmcu=atmega3290:crtm3290.o%s} \
