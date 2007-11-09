@@ -129,6 +129,7 @@ set devicelist \
 	 attiny84 \
 	 attiny85 \
 	 attiny861 \
+	 attiny88 \
 	 at94K \
 	 at76c711 \
 	 at43usb320 \
