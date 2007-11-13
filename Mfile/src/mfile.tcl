@@ -40,101 +40,102 @@ set highlight "\#ffff80"
 
 global devicelist
 set devicelist \
-    { {at90can32 0x800900}\
-	 {at90can64 0x801100} \
-	 {at90can128 0x801100} \
-	 at90pwm1 \
-	 at90pwm2 \
-	 at90pwm216 \
-	 at90pwm2b \
-	 at90pwm3 \
-	 at90pwm316 \
-	 at90pwm3b \
-	 at90s1200 \
-	 at90s2313 \
-	 at90s2323 \
-	 at90s2333 \
-	 at90s2343 \
-	 {at90s4414 0x800160} \
-	 at90s4433 \
-	 at90s4434 \
-	 {at90s8515 0x800260} \
-	 at90s8535 \
-	 at90usb1286 \
-	 at90usb1287 \
-	 at90usb162 \
-	 at90usb646 \
-	 at90usb647 \
-	 at90usb82 \
-	 {atmega103 0x801000} \
-	 {atmega128 0x801100} \
-	 {atmega1280 0x802200} \
-	 {atmega1281 0x802200} \
-	 atmega16 \
-	 {atmega161 0x800460} \
-	 {atmega162 0x800500} \
-	 atmega163 \
-	 atmega164p \
-	 atmega165 \
-	 atmega165p \
-	 atmega168 \
-	 atmega168p \
-	 atmega169 \
-	 atmega169p \
-	 atmega2560 \
-	 atmega2561 \
-	 atmega32 \
-	 atmega323 \
-	 atmega324p \
-	 atmega325 \
-	 atmega325p \
-	 atmega3250 \
-	 atmega328p \
-	 atmega329 \
-	 atmega329p \
-	 atmega3290 \
-	 atmega3290p \
-	 atmega406 \
-	 atmega48 \
-	 atmega48p \
-	 {atmega64 0x801100} \
-	 {atmega640 0x802200} \
-	 atmega644 \
-	 atmega644p \
-	 atmega645 \
-	 atmega6450 \
-	 atmega649 \
-	 atmega6490 \
-	 atmega8 \
-	 {atmega8515 0x800260} \
-	 atmega8535 \
-	 atmega88
-	 atmega88p
-	 attiny11 \
-	 attiny12 \
-	 attiny13 \
-	 attiny15 \
-	 attiny22 \
-	 attiny2313 \
-	 attiny24 \
-	 attiny25 \
-	 attiny26 \
-	 attiny261 \
-	 attiny28 \
-	 attiny43u \
-	 attiny44 \
-	 attiny45 \
-	 attiny461 \
-	 attiny48 \
-	 attiny84 \
-	 attiny85 \
-	 attiny861 \
-	 attiny88 \
-	 at94K \
-	 at76c711 \
-	 at43usb320 \
-	 at43usb355 \
-	 at86rf401}
+    { {at90can32 0x800900} \
+      {at90can64 0x801100} \
+      {at90can128 0x801100} \
+      at90pwm1 \
+      at90pwm2 \
+      at90pwm216 \
+      at90pwm2b \
+      at90pwm3 \
+      at90pwm316 \
+      at90pwm3b \
+      at90s1200 \
+      at90s2313 \
+      at90s2323 \
+      at90s2333 \
+      at90s2343 \
+      {at90s4414 0x800160} \
+      at90s4433 \
+      at90s4434 \
+      {at90s8515 0x800260} \
+      at90s8535 \
+      at90usb1286 \
+      at90usb1287 \
+      at90usb162 \
+      at90usb646 \
+      at90usb647 \
+      at90usb82 \
+      {atmega103 0x801000} \
+      {atmega128 0x801100} \
+      {atmega1280 0x802200} \
+      {atmega1281 0x802200} \
+      atmega1284p \
+      atmega16 \
+      {atmega161 0x800460} \
+      {atmega162 0x800500} \
+      atmega163 \
+      atmega164p \
+      atmega165 \
+      atmega165p \
+      atmega168 \
+      atmega168p \
+      atmega169 \
+      atmega169p \
+      atmega2560 \
+      atmega2561 \
+      atmega32 \
+      atmega323 \
+      atmega324p \
+      atmega325 \
+      atmega325p \
+      atmega3250 \
+      atmega328p \
+      atmega329 \
+      atmega329p \
+      atmega3290 \
+      atmega3290p \
+      atmega406 \
+      atmega48 \
+      atmega48p \
+      {atmega64 0x801100} \
+      {atmega640 0x802200} \
+      atmega644 \
+      atmega644p \
+      atmega645 \
+      atmega6450 \
+      atmega649 \
+      atmega6490 \
+      atmega8 \
+      {atmega8515 0x800260} \
+      atmega8535 \
+      atmega88
+      atmega88p
+      attiny11 \
+      attiny12 \
+      attiny13 \
+      attiny15 \
+      attiny22 \
+      attiny2313 \
+      attiny24 \
+      attiny25 \
+      attiny26 \
+      attiny261 \
+      attiny28 \
+      attiny43u \
+      attiny44 \
+      attiny45 \
+      attiny461 \
+      attiny48 \
+      attiny84 \
+      attiny85 \
+      attiny861 \
+      attiny88 \
+      at94K \
+      at76c711 \
+      at43usb320 \
+      at43usb355 \
+      at86rf401}
 
 global makefile
 
