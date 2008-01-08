@@ -3986,22 +3986,6 @@ diff -Nur ../binutils-2.18.orig/bfd/Makefile.am ./bfd/Makefile.am
  	coff-h8300.c \
  	coff-h8500.c \
  	coff-i386.c \
-@@ -976,13 +980,13 @@
- bfdver.h: $(srcdir)/version.h $(srcdir)/Makefile.in
- 	@echo "creating $@"
- 	@bfd_version=`echo "$(VERSION)" | sed -e 's/\([^\.]*\)\.*\([^\.]*\)\.*\([^\.]*\)\.*\([^\.]*\)\.*\([^\.]*\).*/\1.00\2.00\3.00\4.00\5/' -e 's/\([^\.]*\)\..*\(..\)\..*\(..\)\..*\(..\)\..*\(..\)$$/\1\2\3\4\5/'` ;\
--	bfd_version_string="\"$(VERSION)\"" ;\
-+	bfd_version_string="\"$(VERSION) + coff-avr-patch (20050630)\"" ;\
- 	bfd_soversion="$(VERSION)" ;\
- 	bfd_version_package="\"$(PKGVERSION)\"" ;\
- 	report_bugs_to="\"$(REPORT_BUGS_TO)\"" ;\
- 	if test "x$(RELEASE)" = x ; then \
- 	  bfd_version_date=`sed -n -e 's/.*DATE //p' < $(srcdir)/version.h` ;\
--	  bfd_version_string="\"$(VERSION).$${bfd_version_date}\"" ;\
-+	  bfd_version_string="\"$(VERSION).$${bfd_version_date} + coff-avr-patch (20050630)\"" ;\
- 	  bfd_soversion="$(VERSION).$${bfd_version_date}" ;\
- 	fi ;\
- 	sed -e "s,@bfd_version@,$$bfd_version," \
 @@ -1186,6 +1190,12 @@
    coff-m68k.c $(INCDIR)/hashtab.h $(INCDIR)/coff/m68k.h \
    $(INCDIR)/coff/internal.h libcoff.h $(INCDIR)/bfdlink.h \
@@ -4036,22 +4020,6 @@ diff -Nur ../binutils-2.18.orig/bfd/Makefile.in ./bfd/Makefile.in
  	coff-h8300.c \
  	coff-h8500.c \
  	coff-i386.c \
-@@ -1556,13 +1560,13 @@
- bfdver.h: $(srcdir)/version.h $(srcdir)/Makefile.in
- 	@echo "creating $@"
- 	@bfd_version=`echo "$(VERSION)" | sed -e 's/\([^\.]*\)\.*\([^\.]*\)\.*\([^\.]*\)\.*\([^\.]*\)\.*\([^\.]*\).*/\1.00\2.00\3.00\4.00\5/' -e 's/\([^\.]*\)\..*\(..\)\..*\(..\)\..*\(..\)\..*\(..\)$$/\1\2\3\4\5/'` ;\
--	bfd_version_string="\"$(VERSION)\"" ;\
-+	bfd_version_string="\"$(VERSION) + coff-avr-patch (20050630)\"" ;\
- 	bfd_soversion="$(VERSION)" ;\
- 	bfd_version_package="\"$(PKGVERSION)\"" ;\
- 	report_bugs_to="\"$(REPORT_BUGS_TO)\"" ;\
- 	if test "x$(RELEASE)" = x ; then \
- 	  bfd_version_date=`sed -n -e 's/.*DATE //p' < $(srcdir)/version.h` ;\
--	  bfd_version_string="\"$(VERSION).$${bfd_version_date}\"" ;\
-+	  bfd_version_string="\"$(VERSION).$${bfd_version_date} + coff-avr-patch (20050630)\"" ;\
- 	  bfd_soversion="$(VERSION).$${bfd_version_date}" ;\
- 	fi ;\
- 	sed -e "s,@bfd_version@,$$bfd_version," \
 @@ -1766,6 +1770,12 @@
    coff-m68k.c $(INCDIR)/hashtab.h $(INCDIR)/coff/m68k.h \
    $(INCDIR)/coff/internal.h libcoff.h $(INCDIR)/bfdlink.h \

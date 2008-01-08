@@ -1,0 +1,38 @@
+--- gcc/config/avr/avr.c.old	2007-11-07 16:27:46.093750000 -0700
++++ gcc/config/avr/avr.c	2007-11-07 16:28:27.093750000 -0700
+@@ -220,6 +220,7 @@ static const struct mcu_type_s avr_mcu_t
+   { "attiny861",    ARCH_AVR25, "__AVR_ATtiny861__" },
+   { "attiny43u",    ARCH_AVR25, "__AVR_ATtiny43U__" },
+   { "attiny48",     ARCH_AVR25, "__AVR_ATtiny48__" },
++  { "attiny88",     ARCH_AVR25, "__AVR_ATtiny88__" },
+   { "at86rf401",    ARCH_AVR25, "__AVR_AT86RF401__" },
+     /* Classic, > 8K.  */
+   { "avr3",         ARCH_AVR3, NULL },
+--- gcc/config/avr/avr.h.old	2007-11-07 16:27:50.000000000 -0700
++++ gcc/config/avr/avr.h	2007-11-07 20:39:25.687500000 -0700
+@@ -816,6 +816,7 @@ mmcu=*:-mmcu=%*}"
+   mmcu=atmega8hva|\
+   mmcu=atmega16hva|\
+   mmcu=attiny48|\
++  mmcu=attiny88|\
+   mmcu=at90can*|\
+   mmcu=at90pwm*|\
+   mmcu=at90usb*: -Tdata 0x800100}\
+@@ -870,6 +871,7 @@ mmcu=*:-mmcu=%*}"
+ %{mmcu=attiny861:crttn861.o%s} \
+ %{mmcu=attiny43u:crttn43u.o%s} \
+ %{mmcu=attiny48:crttn48.o%s} \
++%{mmcu=attiny88:crttn88.o%s} \
+ %{mmcu=atmega103|mmcu=avr3:crtm103.o%s} \
+ %{mmcu=at43usb320:crt43320.o%s} \
+ %{mmcu=at43usb355:crt43355.o%s} \
+--- gcc/config/avr/t-avr.old	2007-11-07 16:27:53.593750000 -0700
++++ gcc/config/avr/t-avr	2007-11-07 20:39:53.687500000 -0700
+@@ -55,6 +55,7 @@ MULTILIB_MATCHES = \
+ 	mmcu?avr25=mmcu?attiny861 \
+ 	mmcu?avr25=mmcu?attiny43u \
+ 	mmcu?avr25=mmcu?attiny48 \
++	mmcu?avr25=mmcu?attiny88 \
+ 	mmcu?avr25=mmcu?at86rf401 \
+ 	mmcu?avr3=mmcu?atmega103 \
+ 	mmcu?avr3=mmcu?at43usb320 \
