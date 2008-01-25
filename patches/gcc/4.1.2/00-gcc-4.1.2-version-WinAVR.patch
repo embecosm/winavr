@@ -5,7 +5,7 @@
     the revision of your modified compiler.  */
  
 -#define VERSUFFIX ""
-+#define VERSUFFIX " (WinAVR 20070525)"
++#define VERSUFFIX " (WinAVR 20070518rc2)"
  
  /* This is the location of the online document giving instructions for
     reporting bugs.  If you distribute a modified version of GCC,
