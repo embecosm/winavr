@@ -95,6 +95,8 @@ set devicelist \
       atmega329p \
       atmega3290 \
       atmega3290p \
+      atmega32c1 \
+      atmega32m1 \
       atmega406 \
       atmega48 \
       atmega48p \
