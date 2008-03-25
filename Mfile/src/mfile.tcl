@@ -118,6 +118,7 @@ set devicelist \
       attiny12 \
       attiny13 \
       attiny15 \
+      attiny167 \
       attiny22 \
       attiny2313 \
       attiny24 \
@@ -138,7 +139,9 @@ set devicelist \
       at76c711 \
       at43usb320 \
       at43usb355 \
-      at86rf401}
+      at86rf401 \
+      atxmega128a1 \
+      atxmega64a1 }
 
 global makefile
 
