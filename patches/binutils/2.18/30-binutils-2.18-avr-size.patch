@@ -1,3 +1,5 @@
+AVR specific only
+--------------------------------------------------------------------------------
 --- binutils/size.c	2007-08-06 13:56:14.000000000 -0600
 +++ binutils/size.c	2007-09-13 09:13:10.281250000 -0600
 @@ -35,10 +35,31 @@
@@ -45,7 +47,7 @@
  static int show_version = 0;
  static int show_help = 0;
  static int show_totals = 0;
-@@ -63,6 +83,150 @@ static bfd_size_type total_textsize;
+@@ -63,6 +83,156 @@ static bfd_size_type total_textsize;
  /* Program exit status.  */
  static int return_code = 0;
  
@@ -81,7 +83,7 @@
 +	{"atmega2560",  AVR256K, AVR8K,  AVR4K},
 +	{"atmega2561",  AVR256K, AVR8K,  AVR4K},
 +
-+	{"at43usb320",  AVR128K, 608,    0},
++	{"at43usb320",  AVR128K, 608UL,    0},
 +	{"at90can128",  AVR128K, AVR4K,  AVR4K},
 +	{"at90usb1286", AVR128K, AVR8K,  AVR4K},
 +	{"at90usb1287", AVR128K, AVR8K,  AVR4K},
@@ -89,7 +91,8 @@
 +	{"atmega1280",  AVR128K, AVR8K,  AVR4K},
 +	{"atmega1281",  AVR128K, AVR8K,  AVR4K},
 +	{"atmega1284P", AVR128K, AVR16K, AVR4K},
-+	{"atmega103",   AVR128K, 4000,   AVR4K},
++	{"atmega103",   AVR128K, 4000UL,   AVR4K},
++	{"atxmega128a1",AVR128K, AVR8K,  AVR2K},
 +
 +	{"at90can64",   AVR64K,  AVR4K,  AVR2K},
 +	{"at90usb646",  AVR64K,  AVR4K,  AVR2K},
@@ -102,6 +105,7 @@
 +	{"atmega6450",  AVR64K,  AVR4K,  AVR2K},
 +	{"atmega649",   AVR64K,  AVR4K,  AVR2K},
 +	{"atmega6490",  AVR64K,  AVR4K,  AVR2K},
++	{"atxmega64a1", AVR64K,  AVR4K,  AVR2K},
 +
 +	{"atmega406",   AVR40K,  AVR512, AVR2K},
 +
@@ -120,6 +124,9 @@
 +	{"atmega3290",  AVR32K,  AVR2K,  AVR1K},
 +	{"atmega3290p", AVR32K,  AVR2K,  AVR1K},
 +	{"atmega32hvb", AVR32K,  AVR2K,  AVR1K},
++	{"atmega32c1",  AVR32K,  AVR2K,  AVR1K},
++	{"atmega32m1",  AVR32K,  AVR2K,  AVR1K},
++	{"atmega32u4",  AVR32K,  2560UL, AVR1K},
 +
 +	{"at43usb355",  AVR24K,  1120,   0},
 +
@@ -139,6 +146,7 @@
 +	{"atmega168p",  AVR16K,  AVR1K,  AVR512},
 +	{"atmega169",   AVR16K,  AVR1K,  AVR512},
 +	{"atmega169p",  AVR16K,  AVR1K,  AVR512},
++   {"attiny167",   AVR16K,  AVR512, AVR512},
 +
 +	{"at90c8534",   AVR8K,   352,    AVR512},
 +	{"at90pwm1",    AVR8K,   AVR512, AVR512},
@@ -196,7 +204,7 @@
  static char *target = NULL;
  
  /* Forward declarations.  */
-@@ -78,7 +235,8 @@ usage (FILE *stream, int status)
+@@ -78,7 +240,8 @@ usage (FILE *stream, int status)
    fprintf (stream, _(" Displays the sizes of sections inside binary files\n"));
    fprintf (stream, _(" If no input file(s) are specified, a.out is assumed\n"));
    fprintf (stream, _(" The options are:\n\
@@ -206,7 +214,7 @@
    -o|-d|-x  --radix={8|10|16}         Display numbers in octal, decimal or hex\n\
    -t        --totals                  Display the total sizes (Berkeley only)\n\
              --common                  Display total size for *COM* syms\n\
-@@ -87,11 +245,7 @@ usage (FILE *stream, int status)
+@@ -87,11 +250,7 @@ usage (FILE *stream, int status)
    -h        --help                    Display this information\n\
    -v        --version                 Display the program's version\n\
  \n"),
@@ -219,7 +227,7 @@
  );
    list_supported_targets (program_name, stream);
    if (REPORT_BUGS_TO[0] && status == 0)
-@@ -102,6 +256,7 @@ usage (FILE *stream, int status)
+@@ -102,6 +261,7 @@ usage (FILE *stream, int status)
  #define OPTION_FORMAT (200)
  #define OPTION_RADIX (OPTION_FORMAT + 1)
  #define OPTION_TARGET (OPTION_RADIX + 1)
@@ -227,7 +235,7 @@
  
  static struct option long_options[] =
  {
-@@ -109,6 +264,7 @@ static struct option long_options[] =
+@@ -109,6 +269,7 @@ static struct option long_options[] =
    {"format", required_argument, 0, OPTION_FORMAT},
    {"radix", required_argument, 0, OPTION_RADIX},
    {"target", required_argument, 0, OPTION_TARGET},
@@ -235,7 +243,7 @@
    {"totals", no_argument, &show_totals, 1},
    {"version", no_argument, &show_version, 1},
    {"help", no_argument, &show_help, 1},
-@@ -140,7 +296,7 @@ main (int argc, char **argv)
+@@ -140,7 +301,7 @@ main (int argc, char **argv)
    bfd_init ();
    set_default_bfd_target ();
  
@@ -244,7 +252,7 @@
  			   (int *) 0)) != EOF)
      switch (c)
        {
-@@ -149,11 +305,15 @@ main (int argc, char **argv)
+@@ -149,11 +310,15 @@ main (int argc, char **argv)
  	  {
  	  case 'B':
  	  case 'b':
@@ -262,7 +270,7 @@
  	    break;
  	  default:
  	    non_fatal (_("invalid argument to --format: %s"), optarg);
-@@ -161,6 +321,10 @@ main (int argc, char **argv)
+@@ -161,6 +326,10 @@ main (int argc, char **argv)
  	  }
  	break;
  
@@ -273,7 +281,7 @@
        case OPTION_TARGET:
  	target = optarg;
  	break;
-@@ -189,11 +353,14 @@ main (int argc, char **argv)
+@@ -189,11 +358,14 @@ main (int argc, char **argv)
  	break;
  
        case 'A':
@@ -290,7 +298,7 @@
        case 'v':
        case 'V':
  	show_version = 1;
-@@ -239,7 +406,7 @@ main (int argc, char **argv)
+@@ -239,7 +411,7 @@ main (int argc, char **argv)
      for (; optind < argc;)
        display_file (argv[optind++]);
  
@@ -299,7 +307,7 @@
      {
        bfd_size_type total = total_textsize + total_datasize + total_bsssize;
  
-@@ -600,13 +767,117 @@ print_sysv_format (bfd *file)
+@@ -600,13 +772,117 @@ print_sysv_format (bfd *file)
    printf ("\n\n");
  }
  

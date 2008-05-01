@@ -1,3 +1,6 @@
+AVR specific only
+Deprecated
+--------------------------------------------------------------------------------
 diff -Nur ../binutils-2.18.orig/binutils/doc/objcopy.1 ./binutils/doc/objcopy.1
 --- ../binutils-2.18.orig/binutils/doc/objcopy.1	Tue Oct 23 21:44:42 2007
 +++ ./binutils/doc/objcopy.1	Tue Oct 23 22:18:44 2007
