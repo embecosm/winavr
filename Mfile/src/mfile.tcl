@@ -117,6 +117,7 @@ set devicelist \
       attiny11 \
       attiny12 \
       attiny13 \
+      attiny13a \
       attiny15 \
       attiny167 \
       attiny22 \
