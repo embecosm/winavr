@@ -98,6 +98,7 @@ set devicelist \
       atmega32c1 \
       atmega32m1 \
       atmega32u4 \
+      atmega32u6 \
       atmega406 \
       atmega48 \
       atmega48p \
@@ -141,8 +142,12 @@ set devicelist \
       at43usb320 \
       at43usb355 \
       at86rf401 \
+      atxmega64a1 \
+      atxmega64a3 \
       atxmega128a1 \
-      atxmega64a1 }
+      atxmega128a3 \
+      atxmega256a3 \
+      atxmega256a3b }
 
 global makefile
 
