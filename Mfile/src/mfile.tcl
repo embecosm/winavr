@@ -136,6 +136,7 @@ set devicelist \
       attiny84 \
       attiny85 \
       attiny861 \
+      attiny87 \
       attiny88 \
       at94K \
       at76c711 \
