@@ -142,6 +142,7 @@ set devicelist \
       at43usb320 \
       at43usb355 \
       at86rf401 \
+      atxmega32a4 \
       atxmega64a1 \
       atxmega64a3 \
       atxmega128a1 \
