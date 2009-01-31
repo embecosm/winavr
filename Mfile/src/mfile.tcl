@@ -50,6 +50,7 @@ set devicelist \
       at90pwm3 \
       at90pwm316 \
       at90pwm3b \
+      at90pwm81 \
       at90s1200 \
       at90s2313 \
       at90s2323 \
@@ -60,17 +61,20 @@ set devicelist \
       at90s4434 \
       {at90s8515 0x800260} \
       at90s8535 \
+      at90scr100 \
       at90usb1286 \
       at90usb1287 \
       at90usb162 \
       at90usb646 \
       at90usb647 \
       at90usb82 \
+      ata6289 \
       {atmega103 0x801000} \
       {atmega128 0x801100} \
       {atmega1280 0x802200} \
       {atmega1281 0x802200} \
       atmega1284p \
+      atmega128rfa1 \
       atmega16 \
       {atmega161 0x800460} \
       {atmega162 0x800500} \
@@ -82,6 +86,8 @@ set devicelist \
       atmega168p \
       atmega169 \
       atmega169p \
+      atmega16m1 \
+      atmega16u4 \
       atmega2560 \
       atmega2561 \
       atmega32 \
@@ -102,6 +108,7 @@ set devicelist \
       atmega406 \
       atmega48 \
       atmega48p \
+      atmega4hvd \
       {atmega64 0x801100} \
       {atmega640 0x802200} \
       atmega644 \
@@ -110,11 +117,14 @@ set devicelist \
       atmega6450 \
       atmega649 \
       atmega6490 \
+      atmega64c1 \
+      atmega64m1 \
       atmega8 \
       {atmega8515 0x800260} \
       atmega8535 \
-      atmega88
-      atmega88p
+      atmega88 \
+      atmega88p \
+      atmega8hvd \
       attiny11 \
       attiny12 \
       attiny13 \
@@ -128,6 +138,7 @@ set devicelist \
       attiny26 \
       attiny261 \
       attiny28 \
+      attiny327 \
       attiny43u \
       attiny44 \
       attiny45 \
@@ -143,13 +154,19 @@ set devicelist \
       at43usb320 \
       at43usb355 \
       at86rf401 \
+      atxmega16a4 \
+      atxmega16d4 \
       atxmega32a4 \
+      atxmega32d4 \
       atxmega64a1 \
       atxmega64a3 \
       atxmega128a1 \
       atxmega128a3 \
       atxmega256a3 \
-      atxmega256a3b }
+      atxmega256a3b \
+      m3000f \
+      m3000s \
+      m3001b }
 
 global makefile
 
