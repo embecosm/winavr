@@ -86,6 +86,7 @@ set devicelist \
       atmega168p \
       atmega169 \
       atmega169p \
+      atmega16hvb \
       atmega16m1 \
       atmega16u4 \
       atmega2560 \
@@ -102,6 +103,7 @@ set devicelist \
       atmega3290 \
       atmega3290p \
       atmega32c1 \
+      atmega32hvb \
       atmega32m1 \
       atmega32u4 \
       atmega32u6 \
