@@ -164,8 +164,11 @@ set devicelist \
       atxmega64a3 \
       atxmega128a1 \
       atxmega128a3 \
+      atxmega128d3 \
+      atxmega192a3 \
       atxmega256a3 \
       atxmega256a3b \
+      atxmega256d3 \
       m3000f \
       m3000s \
       m3001b }
