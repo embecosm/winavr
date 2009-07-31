@@ -87,7 +87,9 @@ set devicelist \
       atmega169 \
       atmega169p \
       atmega16hvb \
+      atmega16c1 \
       atmega16m1 \
+      atmega16u2 \
       atmega16u4 \
       atmega2560 \
       atmega2561 \
@@ -105,6 +107,7 @@ set devicelist \
       atmega32c1 \
       atmega32hvb \
       atmega32m1 \
+      atmega32u2 \
       atmega32u4 \
       atmega32u6 \
       atmega406 \
@@ -127,6 +130,9 @@ set devicelist \
       atmega88 \
       atmega88p \
       atmega8hvd \
+      atmega8c1 \
+      atmega8m1 \
+      atmega8u2 \
       attiny11 \
       attiny12 \
       attiny13 \
@@ -162,10 +168,12 @@ set devicelist \
       atxmega32d4 \
       atxmega64a1 \
       atxmega64a3 \
+      atxmega64d3 \
       atxmega128a1 \
       atxmega128a3 \
       atxmega128d3 \
       atxmega192a3 \
+      atxmega192d3 \
       atxmega256a3 \
       atxmega256a3b \
       atxmega256d3 \
