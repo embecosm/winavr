@@ -118,6 +118,7 @@ set devicelist \
       {atmega640 0x802200} \
       atmega644 \
       atmega644p \
+      atmega644pa \
       atmega645 \
       atmega6450 \
       atmega649 \
@@ -141,12 +142,15 @@ set devicelist \
       attiny167 \
       attiny22 \
       attiny2313 \
+      attiny2313a \
       attiny24 \
       attiny25 \
       attiny26 \
       attiny261 \
+      attiny261a \
       attiny28 \
       attiny327 \
+      attiny4313 \
       attiny43u \
       attiny44 \
       attiny45 \
@@ -155,6 +159,7 @@ set devicelist \
       attiny84 \
       attiny85 \
       attiny861 \
+      attiny861a \
       attiny87 \
       attiny88 \
       at94K \
