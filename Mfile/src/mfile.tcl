@@ -144,6 +144,7 @@ set devicelist \
       attiny2313 \
       attiny2313a \
       attiny24 \
+      attiny24a \
       attiny25 \
       attiny26 \
       attiny261 \
@@ -153,6 +154,7 @@ set devicelist \
       attiny4313 \
       attiny43u \
       attiny44 \
+      attiny44a \
       attiny45 \
       attiny461 \
       attiny48 \
