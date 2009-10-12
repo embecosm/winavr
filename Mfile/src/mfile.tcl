@@ -157,6 +157,7 @@ set devicelist \
       attiny44a \
       attiny45 \
       attiny461 \
+      attiny461a \
       attiny48 \
       attiny84 \
       attiny85 \
