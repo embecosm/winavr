@@ -76,6 +76,7 @@ set devicelist \
       atmega1284p \
       atmega128rfa1 \
       atmega16 \
+      atmega16a \
       {atmega161 0x800460} \
       {atmega162 0x800500} \
       atmega163 \
@@ -134,6 +135,7 @@ set devicelist \
       atmega8535 \
       atmega88 \
       atmega88p \
+      atmega88pa \
       atmega8hvd \
       atmega8c1 \
       atmega8m1 \
