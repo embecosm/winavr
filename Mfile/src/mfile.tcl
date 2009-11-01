@@ -86,6 +86,7 @@ set devicelist \
       atmega168p \
       atmega169 \
       atmega169p \
+      atmega169pa \
       atmega16hvb \
       atmega16c1 \
       atmega16m1 \
@@ -96,6 +97,7 @@ set devicelist \
       atmega32 \
       atmega323 \
       atmega324p \
+      atmega324pa \
       atmega325 \
       atmega325p \
       atmega3250 \
@@ -122,8 +124,10 @@ set devicelist \
       atmega645 \
       atmega6450 \
       atmega649 \
+      atmega649p \
       atmega6490 \
       atmega64c1 \
+      atmega64hve \
       atmega64m1 \
       atmega8 \
       {atmega8515 0x800260} \
