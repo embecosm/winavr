@@ -88,6 +88,8 @@ set devicelist \
       atmega169 \
       atmega169p \
       atmega169pa \
+      atmega16hva \
+      atmega16hva2 \
       atmega16hvb \
       atmega16c1 \
       atmega16m1 \
