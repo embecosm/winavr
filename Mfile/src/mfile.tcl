@@ -139,8 +139,6 @@ set devicelist \
       atmega88p \
       atmega88pa \
       atmega8hvd \
-      atmega8c1 \
-      atmega8m1 \
       atmega8u2 \
       attiny11 \
       attiny12 \
@@ -158,7 +156,6 @@ set devicelist \
       attiny261 \
       attiny261a \
       attiny28 \
-      attiny327 \
       attiny4313 \
       attiny43u \
       attiny44 \
