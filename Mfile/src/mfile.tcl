@@ -80,12 +80,16 @@ set devicelist \
       {atmega161 0x800460} \
       {atmega162 0x800500} \
       atmega163 \
+      atmega164a \
       atmega164p \
       atmega165 \
+      atmega165a \
       atmega165p \
       atmega168 \
+      atmega168a \
       atmega168p \
       atmega169 \
+      atmega169a \
       atmega169p \
       atmega169pa \
       atmega16hva \
@@ -99,14 +103,17 @@ set devicelist \
       atmega2561 \
       atmega32 \
       atmega323 \
+      atmega324a \
       atmega324p \
       atmega324pa \
       atmega325 \
       atmega325p \
       atmega3250 \
+      atmega328 \
       atmega328p \
       atmega329 \
       atmega329p \
+      atmega329pa \
       atmega3290 \
       atmega3290p \
       atmega32c1 \
@@ -117,18 +124,27 @@ set devicelist \
       atmega32u6 \
       atmega406 \
       atmega48 \
+      atmega48a \
       atmega48p \
       atmega4hvd \
       {atmega64 0x801100} \
       {atmega640 0x802200} \
       atmega644 \
+      atmega644a \
       atmega644p \
       atmega644pa \
       atmega645 \
+      atmega645a \
+      atmega645p \
       atmega6450 \
+      atmega6450a \
+      atmega6450p \
       atmega649 \
+      atmega649a \
       atmega649p \
       atmega6490 \
+      atmega6490a \
+      atmega6490p \
       atmega64c1 \
       atmega64hve \
       atmega64m1 \
@@ -136,16 +152,22 @@ set devicelist \
       {atmega8515 0x800260} \
       atmega8535 \
       atmega88 \
+      atmega88a \
       atmega88p \
       atmega88pa \
       atmega8hvd \
       atmega8u2 \
+      attiny4 \
+      attiny5 \
+      attiny9 \
+      attiny10 \
       attiny11 \
       attiny12 \
       attiny13 \
       attiny13a \
       attiny15 \
       attiny167 \
+      attiny20 \
       attiny22 \
       attiny2313 \
       attiny2313a \
@@ -156,6 +178,7 @@ set devicelist \
       attiny261 \
       attiny261a \
       attiny28 \
+      attiny40 \
       attiny4313 \
       attiny43u \
       attiny44 \
