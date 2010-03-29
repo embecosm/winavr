@@ -95,7 +95,6 @@ set devicelist \
       atmega16hva \
       atmega16hva2 \
       atmega16hvb \
-      atmega16c1 \
       atmega16m1 \
       atmega16u2 \
       atmega16u4 \
@@ -130,7 +129,6 @@ set devicelist \
       atmega48 \
       atmega48a \
       atmega48p \
-      atmega4hvd \
       {atmega64 0x801100} \
       {atmega640 0x802200} \
       atmega644 \
@@ -159,7 +157,6 @@ set devicelist \
       atmega88a \
       atmega88p \
       atmega88pa \
-      atmega8hvd \
       atmega8u2 \
       attiny4 \
       attiny5 \
