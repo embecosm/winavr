@@ -107,14 +107,18 @@ set devicelist \
       atmega324p \
       atmega324pa \
       atmega325 \
+      atmega325a \
       atmega325p \
       atmega3250 \
+      atmega3250a \
       atmega328 \
       atmega328p \
       atmega329 \
+      atmega329a \
       atmega329p \
       atmega329pa \
       atmega3290 \
+      atmega3290a \
       atmega3290p \
       atmega32c1 \
       atmega32hvb \
@@ -188,6 +192,7 @@ set devicelist \
       attiny461a \
       attiny48 \
       attiny84 \
+      attiny84a \
       attiny85 \
       attiny861 \
       attiny861a \
@@ -203,9 +208,11 @@ set devicelist \
       atxmega32a4 \
       atxmega32d4 \
       atxmega64a1 \
+      atxmega64a1u \
       atxmega64a3 \
       atxmega64d3 \
       atxmega128a1 \
+      atxmega128a1u \
       atxmega128a3 \
       atxmega128d3 \
       atxmega192a3 \
@@ -213,9 +220,7 @@ set devicelist \
       atxmega256a3 \
       atxmega256a3b \
       atxmega256d3 \
-      m3000f \
-      m3000s \
-      m3001b }
+      m3000 }
 
 global makefile
 
